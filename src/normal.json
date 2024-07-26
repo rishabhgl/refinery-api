@@ -1,0 +1,10 @@
+{
+    "centrifugal pump": {
+        "accelerometer": {"acceleration_x": "0.05",
+        "acceleration_y": "0.05",
+        "acceleration_z": "0.05",
+        "acceleration_rms": "0.1",
+        "amplitude": "0.25",
+        "frequency": "50"}
+    }
+  }
