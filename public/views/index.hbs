@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>{{ title }}</title>
+    <link rel="icon" href="/img/icon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <div class="main-content">
+      {{!-- {{>header}} --}}
+      <h2>{{ message }}</h2>
+      <div class="api-links">
+
+        <div class="facilities">
+            <h3> Facilities </h3>
+            <p> For fetching a list of facilities in the refinery</p>
+            <button id="facilities-list">Fetch facilities</button>
+            <p> For fetching all the equipment in a facility</p>
+            <form id="facility-equipment-list">
+                <input type="text" placeholder="Enter facility id">
+                <button>Get Equipment List</button>
+            </form>
+        </div>
+
+        <div class="equipment">
+            <h3> Equipment</h3>
+            <p> For fetching a list of all sensors monitoring a piece of equipment</p>
+            <form id="equipment-sensor-list">
+                <input type="text" placeholder="Enter equipment id">
+                <button>Get Sensor List</button>
+            </form>
+        </div>
+
+        <div class="sensor">
+            <h3> Sensor Readings</h3>
+            <p> For fetching the latest n readings from a sensor</p>
+            <form id="sensor-latest">
+                <input type="text" id="sensorId" placeholder="Enter sensor id">
+                <input type="text" id="numReadings" placeholder="Enter number of readings">
+                <button>Get Latest Sensor Readings</button>
+            </form>
+            <p> For fetching the latest n spikes in readings from a sensor</p>
+            <form id="sensor-spikes">
+                <input type="text" id="sensorId" placeholder="Enter sensor id">
+                <input type="text" id="numReadings" placeholder="Enter number of readings">
+                <input type="text" id="parameter" placeholder="Enter parameter to check">
+                <button>Get Spikes in Sensor Readings</button>
+            </form>
+            {{!-- <p> For fetching the latest n readings from a sensor</p>
+            <form id="sensor-latest">
+                <input type="text" id="sensorId" placeholder="Enter sensor id">
+                <input type="text" id="numReadings" placeholder="Enter number of readings">
+                <button>Get Latest Sensor Readings</button>
+            </form> --}}
+        </div>
+
+      </div>
+      <p id="m1"></p>
+      <p id="m2"></p>
+    </div>
+    {{!-- {{>footer}} --}}
+    <script src="/js/main.js"></script>
+  </body>
+</html>
